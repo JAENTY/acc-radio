@@ -1,1 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Imprezo Tech Solutions - Let's Build the Future Together" />
+  <title>Contact Us - Imprezo Tech Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top left, #0f172a, #1e293b 60%, #000);
+      color: #f8fafc;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: linear-gradient(90deg, #0ea5e9, #6366f1);
+      color: white;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      opacity: 0.9;
+    }
+
+    .contact-section {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 2rem;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      backdrop-filter: blur(12px);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .contact-info h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #38bdf8;
+    }
+
+    .contact-info p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info a {
+      display: block;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      color: #facc15;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    .form-box {
+      background: #0f172a;
+      border-radius: 1.5rem;
+      padding: 2rem;
+      box-shadow: inset 0 0 0 2px #38bdf8;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #f8fafc;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border: none;
+      border-radius: 0.75rem;
+      background: #1e293b;
+      color: white;
+      font-size: 1rem;
+    }
+
+    form textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    form button {
+      background: linear-gradient(to right, #38bdf8, #3b82f6);
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 0.75rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    form button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+    }
+
+    footer {
+      margin-top: 5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 768px) {
+      .contact-section {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contact Imprezo Tech Solutions</h1>
+    <p>We'd love to hear from you. Let's make something incredible together.</p>
+  </header>
+
+  <section class="contact-section">
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p>We're always ready to talk tech, business, and innovation. Reach out and let's spark something powerful.</p>
+      <a href="tel:+17025278346">Phone: (702) 527-8346</a>
+      <a href="mailto:imprezo@toneytech.shop">Email: imprezo@toneytech.shop</a>
+    </div>
+
+    <div class="form-box">
+      <form action="#" method="POST">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="John Doe" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" placeholder="How can we help you today?" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Imprezo Tech Solutions. All rights reserved. Designed to impress, built to last.</p>
+  </footer>
+</body>
+</html>
 
