@@ -3,178 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact Imprezo Tech Solutions - Let's Build the Future Together" />
+  <meta name="description" content="Contact Imprezo Technology Solutions - Cutting-edge IT Services in Tacoma, WA" />
   <title>Contact Us - Imprezo Tech Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
       font-family: 'Inter', sans-serif;
     }
-
     body {
-      background: radial-gradient(circle at top left, #0f172a, #1e293b 60%, #000);
+      position: relative;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
       color: #f8fafc;
-      overflow-x: hidden;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 2rem;
     }
-
-    header {
-      padding: 2rem;
-      text-align: center;
-      background: linear-gradient(90deg, #0ea5e9, #6366f1);
-      color: white;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><defs><linearGradient id="grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="%2306b6d4"/><stop offset="100%" stop-color="%2381e6d9"/></linearGradient></defs><circle cx="20%" cy="30%" r="200" fill="url(%23grad)" opacity="0.1"/><circle cx="80%" cy="70%" r="300" fill="url(%23grad)" opacity="0.05"/></svg>') no-repeat center center;
+      background-size: cover;
+      animation: pulseBG 20s ease-in-out infinite;
     }
-
-    header h1 {
-      font-size: 3rem;
-      font-weight: 800;
-      margin-bottom: 0.5rem;
+    @keyframes pulseBG {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
     }
-
-    header p {
-      font-size: 1.25rem;
-      opacity: 0.9;
-    }
-
-    .contact-section {
-      max-width: 1200px;
-      margin: 4rem auto;
-      padding: 2rem;
+    .contact-container {
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
       border-radius: 2rem;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-      backdrop-filter: blur(12px);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-    }
-
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .contact-info h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #38bdf8;
-    }
-
-    .contact-info p {
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
-    }
-
-    .contact-info a {
-      display: block;
-      margin-top: 1rem;
-      font-size: 1.1rem;
-      color: #facc15;
-      text-decoration: none;
-      word-break: break-word;
-    }
-
-    .form-box {
-      background: #0f172a;
-      border-radius: 1.5rem;
-      padding: 2rem;
-      box-shadow: inset 0 0 0 2px #38bdf8;
-    }
-
-    form label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-      color: #f8fafc;
-    }
-
-    form input,
-    form textarea {
+      box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+      padding: 3rem;
+      max-width: 600px;
       width: 100%;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      border: none;
-      border-radius: 0.75rem;
-      background: #1e293b;
-      color: white;
-      font-size: 1rem;
+      animation: fadeIn 1.5s ease forwards;
     }
-
-    form textarea {
-      resize: vertical;
-      min-height: 150px;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-
-    form button {
-      background: linear-gradient(to right, #38bdf8, #3b82f6);
-      color: white;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 0.75rem;
-      font-size: 1.1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    form button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
-    }
-
-    footer {
-      margin-top: 5rem;
+    h1 {
+      font-size: 2.5rem;
       text-align: center;
-      font-size: 0.9rem;
-      color: #94a3b8;
+      margin-bottom: 2rem;
+      color: #38bdf8;
+      animation: glowText 3s ease-in-out infinite alternate;
     }
-
-    @media (max-width: 768px) {
-      .contact-section {
-        grid-template-columns: 1fr;
-        padding: 2rem 1rem;
-      }
+    @keyframes glowText {
+      0% { text-shadow: 0 0 10px #38bdf8; }
+      100% { text-shadow: 0 0 30px #38bdf8; }
+    }
+    .contact-detail {
+      font-size: 1.2rem;
+      background: rgba(15, 23, 42, 0.5);
+      border-radius: 1rem;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+      border-left: 5px solid #38bdf8;
+      box-shadow: inset 0 0 10px rgba(56, 189, 248, 0.2);
+    }
+    .contact-detail:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+    }
+    .label {
+      font-weight: 700;
+      color: #fbbf24;
+    }
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      color: #94a3b8;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Contact Imprezo Tech Solutions</h1>
-    <p>We'd love to hear from you. Let's make something incredible together.</p>
-  </header>
-
-  <section class="contact-section">
-    <div class="contact-info">
-      <h2>Get in Touch</h2>
-      <p>We're always ready to talk tech, business, and innovation. Reach out and let's spark something powerful.</p>
-      <a href="tel:+17025278346">Phone: (702) 527-8346</a>
-      <a href="mailto:imprezo@toneytech.shop">Email: imprezo@toneytech.shop</a>
+  <div class="background"></div>
+  <div class="contact-container">
+    <h1>Let's Get in Touch</h1>
+    <div class="contact-detail">
+      <span class="label">Phone:</span> (702) 527-8346
     </div>
-
-    <div class="form-box">
-      <form action="#" method="POST">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" placeholder="John Doe" required>
-
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" placeholder="you@example.com" required>
-
-        <label for="message">Your Message</label>
-        <textarea id="message" name="message" placeholder="How can we help you today?" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
+    <div class="contact-detail">
+      <span class="label">Email:</span> <a href="mailto:imprezo@toneytech.shop" style="color:#38bdf8; text-decoration:none;">imprezo@toneytech.shop</a>
     </div>
-  </section>
-
+    <div class="contact-detail">
+      <span class="label">Location:</span> Tacoma, Washington — Serving Local Small Businesses with Passion
+    </div>
+  </div>
   <footer>
-    <p>&copy; 2025 Imprezo Tech Solutions. All rights reserved. Designed to impress, built to last.</p>
+    &copy; 2025 Imprezo Technology Solutions. Every pixel, every bit — secure, powerful, professional.
   </footer>
 </body>
 </html>
-
